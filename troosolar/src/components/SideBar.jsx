@@ -58,7 +58,7 @@ const SideBar = () => {
   };
 
   return (
-    <aside className="w-60 bg-primary text-white flex flex-col min-h-screen h-full px-5">
+    <aside className="w-60 bg-primary text-white flex flex-col min-h-screen px-5">
       {/* Logo */}
       <div className="flex justify-center py-4">
         <img src={logo} alt="Troosolar Logo" className='w-50 h-10 object-cover'/>
@@ -82,7 +82,7 @@ const SideBar = () => {
       <div className="py-4 flex justify-center">
         <button
           onClick={handleLogout}
-          className="cursor-pointer w-44 py-3 pl-5 flex items-center justify-start gap-2 text-white rounded-md hover:scale-105 transition-transform"
+          className="cursor-pointer w-48 py-3 pl-5 flex items-center justify-start gap-2 text-white rounded-md hover:scale-105 transition-transform"
         >
           <img src={logoutIcon} alt="logout" className="w-5 h-5 object-cover" />
           <span className="font-satoshi text-sm">Logout</span>

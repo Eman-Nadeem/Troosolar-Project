@@ -4,6 +4,10 @@ import PrivateRoutes from './PrivateRoutes'
 import Layout from './Layout'
 import Login from './pages/login/Login'
 import UserMgt from './pages/userMgt/UserMgt'
+import Dashboard from './pages/dashboard/Dashboard'
+import statCard from './assets/data/statCardData'
+import UserDetail from './pages/userMgt/UserDetail'
+
 
 const App = () => {
   return (
@@ -13,7 +17,7 @@ const App = () => {
         <Route path="/register" element={<Login/>} />
         <Route element={<PrivateRoutes/>}>
           <Route element={<Layout/>}>
-            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/" element={<Dashboard statCard={statCard}/>} />
             <Route path="/users-mgt" element={<UserMgt/>} />
             <Route path="/credit-score" element={<h1>Credit Score</h1>} />
             <Route path="/loans-mgt" element={<h1>Loans Mgt</h1>} />
@@ -25,6 +29,7 @@ const App = () => {
             <Route path="/tickets" element={<h1>Tickets</h1>} />
             <Route path="/analytics" element={<h1>Analytics</h1>} />
             <Route path="/settings" element={<h1>Settings</h1>} />
+            <Route path="/users/:id" element={<UserDetail />} />
           </Route>
         </Route>
       </Routes>
