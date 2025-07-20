@@ -1,1 +1,18 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../src/assets/fonts/Montserrat-Regular.ttf');
+}
+
 @import "tailwindcss";
+
+@theme{
+    --font-montserrat: Montserrat, "sans-serif";
+    --color-primary: #273E8E;
+    --color-primary-light: #4F64B6;
+    --color-primary-dark: #1E3170;
+    --color-secondary: #F5F7FF;
+    --color-tertiary: #E8A91D;
+    --color-tertiary-dark: #D99119;
+    --text-xxs: 10px;
+    --scrollbar-hidden: scrollbarwidth: none;
+}
