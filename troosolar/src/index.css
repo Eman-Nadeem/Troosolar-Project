@@ -15,4 +15,7 @@
     --color-tertiary-dark: #D99119;
     --color-quaternary: #EBEBEB;
     --color-quinary: #F8F8F8;
+    --text-xxs: 10px;
+    --color-gradient-left: #273E8E;
+    --color-gradient-right: #FFA500;
 }

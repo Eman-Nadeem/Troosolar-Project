@@ -27,7 +27,7 @@ const DropDown = ({ options=[], onSelect=() => {}, title='Select', value }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="border border-gray-200 gap-2 text-xs bg-white px-4 py-2 rounded-md flex items-center justify-between cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
+        className="border border-gray-400 gap-2 text-xs bg-white px-4 py-2 rounded-md flex items-center justify-between cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
       >
         {selected}
         <img src={downArrow} alt="Down Arrow" className='w-3 h-3 object-contain'/>
