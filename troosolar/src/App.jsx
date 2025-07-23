@@ -8,6 +8,7 @@ import Dashboard from './pages/dashboard/Dashboard'
 import statCard from './assets/data/statCardData'
 import UserDetail from './pages/userMgt/UserDetail'
 import CreditScore from './pages/creditScore/CreditScore'
+import LoansMgt from './pages/loansManagement/LoansMgt'
 
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
             <Route path="/" element={<Dashboard statCard={statCard}/>} />
             <Route path="/users-mgt" element={<UserMgt/>} />
             <Route path="/credit-score" element={<CreditScore/>} />
-            <Route path="/loans-mgt" element={<h1>Loans Mgt</h1>} />
+            <Route path="/loans-mgt" element={<LoansMgt/>} />
             <Route path="/loans-disbursement" element={<h1>Loans Disbursement</h1>} />
             <Route path="/transactions" element={<h1>transactions</h1>} />
             <Route path="/balances" element={<h1>Balance</h1>} />

@@ -1,4 +1,4 @@
-import React , { useState } from 'react'
+import React , { useState, useRef, useEffect } from 'react'
 import closeButton from '../../assets/icons/close-button.svg'
 import Meter from '../../components/Meter'
 import rightArrow from '../../assets/icons/right-arrow.svg'
@@ -7,8 +7,23 @@ const bankOptions = ['Access Bank', 'GTBank', 'Zenith Bank', 'UBA', 'Fidelity Ba
 const CreditScoreModal = ({ isOpen, onClose, user }) => {
   const [selectedBank, setSelectedBank] = useState(user?.bankName || 'Access Bank')
   const [showBankOptions, setShowBankOptions] = useState(false)
+
+  const dropdownRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setShowBankOptions(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   if (!isOpen || !user) return null
-  
 
   return (
     <div className="font-montserrat fixed inset-0 pr-5 z-50 bg-black/50 flex items-center justify-end">
@@ -42,7 +57,7 @@ const CreditScoreModal = ({ isOpen, onClose, user }) => {
             />
           </div>
 
-          <div className="flex flex-col gap-2 relative">
+          <div className="flex flex-col gap-2 relative" ref={dropdownRef}>
             <label>Bank Name</label>
             <button
               onClick={() => setShowBankOptions(prev => !prev)}
@@ -62,7 +77,7 @@ const CreditScoreModal = ({ isOpen, onClose, user }) => {
                       setSelectedBank(bank)
                       setShowBankOptions(false)
                     }}
-                    className="px-4 py-2 hover:bg-gray-100 text-xs cursor-pointer"
+                    className="border-b border-gray-300 px-4 py-2 hover:bg-gray-100 text-xs cursor-pointer"
                   >
                     {bank}
                   </div>
