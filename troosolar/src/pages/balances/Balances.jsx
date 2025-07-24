@@ -72,9 +72,11 @@ const Balances = () => {
 
   return (
     <div className='font-montserrat'>
+        {/* Heading and Cards  */}
         <p className='mb-5 font-semibold text-2xl'>Credit Score</p>
         <BalanceCards/>
 
+        {/* Searching and Sorting  */}
         <div className='my-5 '>
             <p className='text-lg mb-5'>Balance Summary</p>
             <div className='flex justify-between'>
@@ -83,6 +85,7 @@ const Balances = () => {
             </div>
         </div>
 
+        {/* Table  */}
         <div className='rounded-lg shadow-md font-montserrat text-sm'>
             <table className="min-w-full table-auto border-collapse">
                 <TableHeader columns={tableHeader}/>

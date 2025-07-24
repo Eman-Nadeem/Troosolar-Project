@@ -34,25 +34,6 @@ const Transactions = () => {
     const [selectedUser, setSelectedUser] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleViewDetails = (user, option) => {
-        if(option === 'View transaction details') {
-            setSelectedUser(user)
-            setIsModalOpen(true)
-        }
-        if(option === 'View order details') {
-            // Handle view order details logic
-            console.log('View order details for:', user);
-        }
-        if(option === 'View customer details') {
-            // Handle view customer details logic
-            console.log('View customer details for:', user);
-        }
-        if(option === 'View loan details') {
-            // Handle view loan details logic
-            console.log('View loan details for:', user);
-        }
-    }
-
     const closeModal = () => {
         setIsModalOpen(false)
         setSelectedUser(null)
