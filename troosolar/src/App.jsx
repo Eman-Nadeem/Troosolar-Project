@@ -10,6 +10,7 @@ import UserDetail from './pages/userMgt/UserDetail'
 import CreditScore from './pages/creditScore/CreditScore'
 import LoansMgt from './pages/loansManagement/LoansMgt'
 import Transactions from './pages/transactions/Transactions'
+import Balances from './pages/balances/Balances'
 
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
             <Route path="/loans-mgt" element={<LoansMgt/>} />
             <Route path="/loans-disbursement" element={<h1>Loans Disbursement</h1>} />
             <Route path="/transactions" element={<Transactions/>} />
-            <Route path="/balances" element={<h1>Balance</h1>} />
+            <Route path="/balances" element={<Balances/>} />
             <Route path="/shop-mgt" element={<h1>Shop Mgt</h1>} />
             <Route path="/referral-mgt" element={<h1>Referral Mgt</h1>} />
             <Route path="/tickets" element={<h1>Tickets</h1>} />
