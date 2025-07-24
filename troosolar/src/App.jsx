@@ -9,6 +9,7 @@ import statCard from './assets/data/statCardData'
 import UserDetail from './pages/userMgt/UserDetail'
 import CreditScore from './pages/creditScore/CreditScore'
 import LoansMgt from './pages/loansManagement/LoansMgt'
+import Transactions from './pages/transactions/Transactions'
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
             <Route path="/credit-score" element={<CreditScore/>} />
             <Route path="/loans-mgt" element={<LoansMgt/>} />
             <Route path="/loans-disbursement" element={<h1>Loans Disbursement</h1>} />
-            <Route path="/transactions" element={<h1>transactions</h1>} />
+            <Route path="/transactions" element={<Transactions/>} />
             <Route path="/balances" element={<h1>Balance</h1>} />
             <Route path="/shop-mgt" element={<h1>Shop Mgt</h1>} />
             <Route path="/referral-mgt" element={<h1>Referral Mgt</h1>} />
