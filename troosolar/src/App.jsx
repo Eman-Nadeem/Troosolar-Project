@@ -12,6 +12,7 @@ import LoansMgt from './pages/loansManagement/LoansMgt'
 import Transactions from './pages/transactions/Transactions'
 import Balances from './pages/balances/Balances'
 import ReferralMgt from './pages/referralMgt/ReferralMgt'
+import Tickets from './pages/tickets/Tickets'
 
 
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
             <Route path="/balances" element={<Balances/>} />
             <Route path="/shop-mgt" element={<h1>Shop Mgt</h1>} />
             <Route path="/referral-mgt" element={<ReferralMgt/>} />
-            <Route path="/tickets" element={<h1>Tickets</h1>} />
+            <Route path="/tickets" element={<Tickets/>} />
             <Route path="/analytics" element={<h1>Analytics</h1>} />
             <Route path="/settings" element={<h1>Settings</h1>} />
             <Route path="/users/:id" element={<UserDetail />} />
