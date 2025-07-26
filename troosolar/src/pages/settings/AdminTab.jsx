@@ -10,7 +10,7 @@ const AdminTab = ({selectedAdmin, setSelectedAdmin, setViewDetail}) => {
     const [activeTab, setActiveTab] = useState('Activity');
     const [searchInput, setSearchInput] = useState('');
 
-    const tableData = [
+    const [tableData, setTableData] = useState([
     {
         firstName: 'Adewale',
         lastName: 'Faizah',
@@ -63,7 +63,7 @@ const AdminTab = ({selectedAdmin, setSelectedAdmin, setViewDetail}) => {
             { activity: 'Reset user password', date: '2025-07-01T12:10:00Z' },
         ],
     },
-    ];
+    ]);
 
     const handleInputChange = (e) => {
         setSearchInput(e.target.value);
@@ -75,10 +75,19 @@ const AdminTab = ({selectedAdmin, setSelectedAdmin, setViewDetail}) => {
     }
     }, []);
 
+    const handleSaveUser = (updatedUser) => {
+        const updatedList = tableData.map(user =>
+            user.email === updatedUser.email ? updatedUser : user
+        );
+        setTableData(updatedList);
+        setSelectedAdmin(updatedUser); // update profile card
+    };
+
+
 
   return (
     <div>
-        <AdminProfileCard user={selectedAdmin}/>
+        <AdminProfileCard user={selectedAdmin} onSave={handleSaveUser}/>
 
         <div className='flex flex-col gap-2.5 my-5'>
             <div className='w-fit'>
