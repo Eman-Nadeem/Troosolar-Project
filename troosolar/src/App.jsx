@@ -13,6 +13,7 @@ import Transactions from './pages/transactions/Transactions'
 import Balances from './pages/balances/Balances'
 import ReferralMgt from './pages/referralMgt/ReferralMgt'
 import Tickets from './pages/tickets/Tickets'
+import Settings from './pages/settings/Settings'
 
 
 const App = () => {
@@ -34,7 +35,7 @@ const App = () => {
             <Route path="/referral-mgt" element={<ReferralMgt/>} />
             <Route path="/tickets" element={<Tickets/>} />
             <Route path="/analytics" element={<h1>Analytics</h1>} />
-            <Route path="/settings" element={<h1>Settings</h1>} />
+            <Route path="/settings" element={<Settings/>} />
             <Route path="/users/:id" element={<UserDetail />} />
           </Route>
         </Route>
