@@ -22,7 +22,7 @@ const CreditScore = () => {
 
   const tableHeader = [
     { key: 'name', label: 'Name' },
-    { key: 'creditScore', label: 'Credit Score', render: (val) => <p className='font-bold'>{val}%</p> },
+    { key: 'creditScore', label: 'Credit Score', render: (val) => <p className={`font-bold text-base ${val < 50 ? 'text-red-600' : 'text-green-600'}`}>{val}%</p> },
     { key: 'loanLimit', label: 'Loan Limit', render: (val) => `₦${val.toLocaleString()}` },
     { key: 'date', label: 'Date', render: (val) => new Date(val).toLocaleDateString() },
     {
@@ -62,7 +62,7 @@ const CreditScore = () => {
     },
     {
       name: "Adam Waa",
-      creditScore: 50,
+      creditScore: 23,
       loanLimit: 4000000,
       date: "2035-07-21T07:22:00",
     },
@@ -74,7 +74,7 @@ const CreditScore = () => {
     },
     {
       name: "Anita Shawn",
-      creditScore: 95,
+      creditScore: 10,
       loanLimit: 4000000,
       date: "2035-07-21T07:22:00",
     },
@@ -86,7 +86,7 @@ const CreditScore = () => {
     },
     {
       name: "Wande Moca",
-      creditScore: 60,
+      creditScore: 35,
       loanLimit: 4000000,
       date: "2035-07-21T07:22:00",
     },
