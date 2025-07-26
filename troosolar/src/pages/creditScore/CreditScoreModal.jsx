@@ -42,7 +42,7 @@ const CreditScoreModal = ({ isOpen, onClose, user }) => {
 
         {/* Credit score meter (static image for now) */}
         <div className="w-full flex justify-center mb-4 px-6">
-          <Meter/>
+          <Meter score={user.creditScore}/>
         </div>
 
         {/* Account Info */}
